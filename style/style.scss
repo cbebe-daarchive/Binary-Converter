@@ -2,22 +2,36 @@
   box-sizing: border-box;
 }
 
+// colour variables
+$background: #007EA7;
+$wrap: #003249;
+$btn-colour: #353B3C;
+
+$byte: #BCD3F2;
+$overflow: #C73E1D;
+$grey: #CCC;
+$muted-black: #252422;
+
+$colour-1: #8ACDEA;
+$colour-2: #CCDBDC;
+
 body {
+
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
   font-family: 'Roboto Mono', monospace;
-  background-color: rgb(10, 71, 112);
+  background-color: $background;
 }
 
 .main-wrap {
   border-radius: 0.5rem;
-  height: 300px;
-  width: 80%;
+  height: auto;
+  width: auto;
   padding: 10px;
-  background-color: rgb(10, 50, 122);
+  background-color: $wrap;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -31,14 +45,14 @@ body {
 }
 
 .byte {
-  background-color: #ABC;
+  background-color: $byte;
   border-radius: 0.5rem;
   margin: 0px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   &.overflow {
-    background-color: #DD360C;
+    background-color: $overflow;
   }
 }
 
@@ -55,21 +69,21 @@ body {
   border-radius: 0.5rem;
   margin: 5px;
   text-align: center;
-  border: solid 5px #222;
-  background-color: #ccc;
+  border: solid 5px $muted-black;
+  background-color: $grey;
   font-size: 4rem;
   user-select: none; 
 }
 
 .byte-edit {
-  color: #CCC;
+  color: $grey;
 }
 
 .dec-wrap {
   display: flex;
   flex-direction: row;
   font-size: 2rem;
-  color: #CCC;
+  color: $grey;
 }
 
 .num-input {
@@ -79,7 +93,7 @@ body {
   font-family: 'Roboto Mono', monospace;
   background-color: transparent;  
   border: none;
-  color: #CCC;
+  color: $grey;
   &:focus {
     border: none;
   }
@@ -91,9 +105,9 @@ body {
 }
 
 button {
-  background-color: rgb(64, 24, 209);
+  background-color: $btn-colour;
   border-radius: .5rem;
-  color: #CCC;
+  color: $grey;
   font-size: 1rem;
   font-family: 'Roboto Mono', monospace;
 }

@@ -7,6 +7,13 @@ Bugs (Resolved):
 - when a byte is removed, 
   ++ can be solved by getting the input from the text field instead of the bytes
 
+## Upcoming Features
+
+- Add tooltips
+- Add "Copied to clipboard" message
+- Maybe a new layout so the buttons don't move every time the bytes are deleted
+- Overflow message
+
 ## Github Pages Link
 
 https://charlesancheta.github.io/binaryrep/

@@ -16,15 +16,15 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Roboto Mono', monospace;
-  background-color: #007EA7;
+  background-color: #0a4770;
 }
 
 .main-wrap {
   border-radius: 0.5rem;
-  height: auto;
-  width: auto;
+  height: 300px;
+  width: 80%;
   padding: 10px;
-  background-color: #003249;
+  background-color: #0a327a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,7 +52,7 @@ body {
 }
 
 .byte {
-  background-color: #BCD3F2;
+  background-color: #ABC;
   border-radius: 0.5rem;
   margin: 0px 10px;
   display: -webkit-box;
@@ -67,7 +67,7 @@ body {
 }
 
 .byte.overflow {
-  background-color: #C73E1D;
+  background-color: #DD360C;
 }
 
 .byte-wrap {
@@ -90,8 +90,8 @@ body {
   border-radius: 0.5rem;
   margin: 5px;
   text-align: center;
-  border: solid 5px #252422;
-  background-color: #CCC;
+  border: solid 5px #222;
+  background-color: #ccc;
   font-size: 4rem;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -135,7 +135,7 @@ body {
 }
 
 button {
-  background-color: #353B3C;
+  background-color: #4018d1;
   border-radius: .5rem;
   color: #CCC;
   font-size: 1rem;
