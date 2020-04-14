@@ -9,4 +9,4 @@ Bugs (Resolved):
 
 ## Github Pages Link
 
-https://charlesancheta.github.io/binarycalc/
+https://charlesancheta.github.io/binaryrep/
