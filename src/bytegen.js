@@ -4,17 +4,21 @@ import {evaluateNumInput} from './binset.js'
 const container = document.getElementById('container')
 const byteEdit = document.getElementById('byteEdit')
 
+// fills byte with either 1s or 0s
 let fillButtonHandle = e => {
   const bits = Array.from(e.target.parentNode.parentNode.getElementsByClassName('bit'))
   if (e.target.classList.contains('ones')) {
+    // turns zeros into ones
     bits.filter(bit => !bit.classList.contains('on')).forEach(bit => {
       bit.classList.add('on')
     })
   } else {
+    // turns ones into zeros
     bits.filter(bit => bit.classList.contains('on')).forEach(bit => {
       bit.classList.remove('on')
     })
   }
+  // update bits' appearance and change number total
   bits.forEach(bit => updateBit(bit))
   evaluateNum()
 }

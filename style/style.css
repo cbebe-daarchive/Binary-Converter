@@ -25,6 +25,19 @@ body {
   width: 80%;
   padding: 10px;
   background-color: #0a327a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .container {
@@ -102,7 +115,7 @@ body {
   color: #CCC;
 }
 
-.num-input, .disp-span {
+.num-input {
   padding: 0;
   font-size: 2rem;
   white-space: pre;
@@ -112,18 +125,13 @@ body {
   color: #CCC;
 }
 
-.num-input:focus, .disp-span:focus {
+.num-input:focus {
   border: none;
 }
 
-.num-input::-webkit-inner-spin-button, .disp-span::-webkit-inner-spin-button, .num-input::-webkit-outer-spin-button, .disp-span::-webkit-outer-spin-button {
+.num-input::-webkit-inner-spin-button, .num-input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.disp-span {
-  display: none;
-  width: 100px;
 }
 
 button {
@@ -132,5 +140,15 @@ button {
   color: #CCC;
   font-size: 1rem;
   font-family: 'Roboto Mono', monospace;
+}
+
+.side-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=style.css.map */

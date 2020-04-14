@@ -1,24 +1,20 @@
+// creates bit string from all the bits
 let generateBinStr = () => {
   const bits = document.querySelectorAll('.bit')
   let binStr = ''
-  let i = 0
-  let firstOne = false
-  while (i < bits.length) {
-    if (!(bits[i].classList.contains('on')) && !firstOne) {
-      i++
-    } else {
-      firstOne = true
-      if (bits[i].classList.contains('on')) {
-        binStr += '1'
-      } else {
-        binStr += '0'
-      }
-      i++
-    }   
+  let leadingOne = false
+  for (let i = 0; i < bits.length; i++) {
+    // will not generate string until leading 1
+    if (!(bits[i].classList.contains('on')) && !leadingOne) continue
+    
+    leadingOne = true
+    binStr += bits[i].classList.contains('on') ? '1' : '0'
   }
+
   return binStr
 }
 
+// copies string to clipboard
 let copyToClipboard = str => {
   const textArea = document.createElement('textarea')
   textArea.value = str
@@ -28,6 +24,7 @@ let copyToClipboard = str => {
   document.body.removeChild(textArea)  
 }
 
+// the the current binary value as a string
 let getBinary = () => {
   const binStr = generateBinStr()
   copyToClipboard(binStr)

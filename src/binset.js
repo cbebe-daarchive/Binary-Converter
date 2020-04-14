@@ -35,32 +35,35 @@ let inputErrorHandle = e => {
 }
 
 let overflowHandle = () => {
+  // max value is 2^n - 1
   const bitLength = document.querySelectorAll('.bit').length
   const maxVal = Math.pow(2, bitLength) - 1
+  
   let numEval = numInput.value
   let overflow = false
   if (numEval > maxVal) {
     numEval &= maxVal
-    overflow = true    
+    overflow = true
   }
   return [numEval, overflow]
 }
 
 let evaluateNumInput = () => {
+
   const bytes = document.querySelectorAll('.byte')
   let [numEval, overflow] = overflowHandle()
   bytes.forEach(byte => byte.classList.remove('overflow'))
-  if (overflow) {
-    bytes.forEach(byte => byte.classList.add('overflow'))
-  }
+  if (overflow) bytes.forEach(byte => byte.classList.add('overflow'))
   inputToBin(numEval)
+
 }
+
 
 let binarySet = e => {
   inputErrorHandle(e)
-  if (tempInput !== numInput.value) {
-    evaluateNumInput()
-  }
+  
+  if (tempInput !== numInput.value) evaluateNumInput()
+  
   tempInput = numInput.value
   numInput.style.width = (numInput.value.length + 2) + "ch"
 }
