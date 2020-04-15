@@ -27,24 +27,24 @@ let generateButtons = () => {
   const btnWrap = document.createElement('div')
   btnWrap.className = 'btn-wrap'
   const classNames = ['zeros','ones']
-  for (let i = 0; i < 2; i ++) {
+  const btnLabels = ['Clear', 'Set']
+  classNames.forEach( (className, index) => {
     const fillBtn = document.createElement('button')
-    fillBtn.className = "fill-btn " + classNames[i]
-    fillBtn.innerText = "Fill " + i + "'s"
+    fillBtn.className = `fill-btn ${className}` 
+    fillBtn.innerText = `${btnLabels[index]} all`
     fillBtn.addEventListener('click', fillButtonHandle)
     btnWrap.appendChild(fillBtn)
-  }
+  })
   return btnWrap
 }
 
 let generateByte = () => {
   const byte = document.createElement('div')
   byte.className = 'byte'
-  byte.appendChild(generateButtons())
-
+  
   const byteWrap = document.createElement('div')
   byteWrap.className = 'byte-wrap'
-
+  
   for (let i = 0; i < 8; i++) {
     const bit = document.createElement('div')
     bit.className = 'bit'
@@ -53,6 +53,7 @@ let generateByte = () => {
     byteWrap.appendChild(bit)
   }
   byte.appendChild(byteWrap)
+  byte.appendChild(generateButtons())
 
   container.insertBefore(byte, container.firstChild)
 }

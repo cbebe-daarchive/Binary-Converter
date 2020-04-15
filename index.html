@@ -11,24 +11,26 @@
 </head>
 <body>
   <div class="main-wrap">
-    <div class="main-subwrap">
-      <div id="container">
+    <div class="sidebar">
+      <div class="side-btns">
+        <button id="getBits">Get binary</button>
+        <div id="byteEdit" class="byte-edit">
+          8 bits
+        </div>
+        <div class="byte-btn">
+          <button class="byte-btn" id="byteAdd">+</button>
+          <button class="byte-btn" id="byteRemove">-</button>
+        </div>
       </div>
+    </div>
+    <div class="main-subwrap">
       <div class="dec-wrap">
         <div id="display" class="display">
         Decimal:
         </div>
         <input type="number" class="num-input" id="numInput" min="0" value="0"></input>
       </div>
-    </div>
-    <div class="side-btns">
-      <button id="getBits">Get binary</button>
-      <div id="byteEdit" class="byte-edit">
-        8 bits
-      </div>
-      <div class="byte-btn">
-        <button class="byte-btn" id="byteAdd">+</button>
-        <button class="byte-btn" id="byteRemove">-</button>
+      <div id="container">
       </div>
     </div>
   </div>

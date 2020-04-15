@@ -16,17 +16,17 @@ $colour-1: #8ACDEA;
 $colour-2: #CCDBDC;
 
 body {
-
-  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
   font-family: 'Roboto Mono', monospace;
   background-color: $background;
+  display: flex;
 }
 
 .main-wrap {
+  flex-direction: column;
   border-radius: 0.5rem;
   height: auto;
   width: auto;
@@ -114,5 +114,6 @@ button {
 
 .side-btns {
   display: flex;
-  flex-direction: column;
+  position: absolute;
+  flex-direction: row;
 }
