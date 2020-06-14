@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./style/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-  <script src="./src/main.js" type="module"></script>
-  <title>Binary to Decimal Converter</title>
-</head>
-<body>
-  <div class="main-wrap">
-    <div class="sidebar">
-      <div class="side-btns">
-        <button id="getBits">Get binary</button>
-        <div id="byteEdit" class="byte-edit">
-          8 bits
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script src="src/main.js"></script>
+    <title>Binary to Decimal Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main" id="bytes"></div>
+      <div class="sidebar">
+        <div class="dec-wrap">
+          <div id="display" class="display">
+            Decimal:
+          </div>
+          <input
+            type="number"
+            class="num-input"
+            id="numInput"
+            min="0"
+            value="0"
+          />
         </div>
-        <div class="byte-btn">
-          <button class="byte-btn" id="byteAdd">+</button>
-          <button class="byte-btn" id="byteRemove">-</button>
+        <div class="side-btns">
+          <button id="getBits">Get binary</button>
+          <div id="byteEdit" class="byte-edit">
+            8 bits
+          </div>
+          <div class="byte-btn">
+            <button class="byte-btn" id="byteAdd">+</button>
+            <button class="byte-btn" id="byteRemove">-</button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="main-subwrap">
-      <div class="dec-wrap">
-        <div id="display" class="display">
-        Decimal:
-        </div>
-        <input type="number" class="num-input" id="numInput" min="0" value="0"></input>
-      </div>
-      <div id="container">
-      </div>
-    </div>
-  </div>
-</body>
+  </body>
 </html>

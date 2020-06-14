@@ -1,4 +1,8 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -8,37 +12,36 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   background-color: rgb(10, 71, 112);
-}
-
-.main-wrap {
-  border-radius: 0.5rem;
-  height: 300px;
-  width: 80%;
-  padding: 10px;
-  background-color: rgb(10, 50, 122);
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: stretch;
 }
 
 .container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-start;
 }
 
+.main {
+  border-radius: 0.5rem;
+  padding: 10px;
+  background-color: rgb(10, 50, 122);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
 .byte {
-  background-color: #ABC;
+  background-color: #abc;
   border-radius: 0.5rem;
   margin: 0px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+
   &.overflow {
-    background-color: #DD360C;
+    background-color: #dd360c;
   }
 }
 
@@ -58,32 +61,34 @@ body {
   border: solid 5px #222;
   background-color: #ccc;
   font-size: 4rem;
-  user-select: none; 
+  user-select: none;
 }
 
 .byte-edit {
-  color: #CCC;
+  color: #ccc;
 }
 
 .dec-wrap {
   display: flex;
   flex-direction: row;
   font-size: 2rem;
-  color: #CCC;
+  color: #ccc;
 }
 
 .num-input {
   padding: 0;
   font-size: 2rem;
   white-space: pre;
-  font-family: 'Roboto Mono', monospace;
-  background-color: transparent;  
+  font-family: "Roboto Mono", monospace;
+  background-color: transparent;
   border: none;
-  color: #CCC;
+  color: #ccc;
+
   &:focus {
     border: none;
   }
-  &::-webkit-inner-spin-button, 
+
+  &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
@@ -92,10 +97,10 @@ body {
 
 button {
   background-color: rgb(64, 24, 209);
-  border-radius: .5rem;
-  color: #CCC;
+  border-radius: 0.5rem;
+  color: #ccc;
   font-size: 1rem;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .side-btns {
