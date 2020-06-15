@@ -57,21 +57,25 @@ export const generateByte = () => {
   container.insertBefore(byte, container.firstChild);
 };
 
-export const addByte = () => {
+export const addBytes = () => {
   let byteCount = Array.from(document.getElementsByClassName("byte")).length;
   if (byteCount < 4) {
-    generateByte();
-    byteCount = byteCount + 1;
-    byteEdit.innerText = `${byteCount * 8}` + " bits";
+    for (let i = 0; i < byteCount; i++) {
+      generateByte();
+    }
+    byteCount <<= 1;
   }
+  byteEdit.innerText = `${byteCount * 8}` + " bits";
   evaluateNumInput();
 };
 
-export const removeByte = () => {
+export const removeBytes = () => {
   let byteCount = Array.from(document.getElementsByClassName("byte")).length;
   if (byteCount > 1) {
-    container.removeChild(container.firstChild);
-    byteCount -= -1;
+    for (let i = 0; i < byteCount >> 1; i++) {
+      container.removeChild(container.firstChild);
+    }
+    byteCount >>= 1;
     byteEdit.innerText = `${byteCount * 8}` + " bits";
   }
   evaluateNum();
