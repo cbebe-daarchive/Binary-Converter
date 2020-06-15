@@ -19,4 +19,4 @@ Bugs (Resolved):
 
 ## Github Pages Link
 
-https://charlesancheta.github.io/binaryrep/
+https://cbebe.github.io/binaryrep/
