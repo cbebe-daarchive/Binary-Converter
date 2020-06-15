@@ -1,7 +1,9 @@
+@import "variables";
+
 .bytes {
   border-radius: 0.5rem;
   padding: 10px;
-  background-color: rgb(10, 50, 122);
+  background-color: $byte-group-colour;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -10,7 +12,7 @@
 }
 
 .byte {
-  background-color: #abc;
+  background-color: $byte-single-colour;
   border-radius: 0.5rem;
   margin: 0px 10px;
   display: flex;
@@ -18,7 +20,7 @@
   align-items: center;
 
   &.overflow {
-    background-color: #dd360c;
+    background-color: $byte-overflow-colour;
   }
 }
 
@@ -30,8 +32,8 @@
   border-radius: 0.5rem;
   margin: 5px;
   text-align: center;
-  border: solid 5px #222;
-  background-color: #ccc;
+  border: solid 5px $bit-border-colour;
+  background-color: $bit-bg-colour;
   font-size: 4rem;
   user-select: none;
 }

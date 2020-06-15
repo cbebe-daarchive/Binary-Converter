@@ -1,3 +1,4 @@
+@import "partials/variables";
 @import "partials/buttons";
 @import "partials/bytes";
 @import "partials/sidebar";
@@ -12,7 +13,7 @@
 
 body {
   font-family: "Roboto Mono", monospace;
-  background-color: rgb(10, 71, 112);
+  background-color: $background-colour;
 }
 
 .container {
@@ -21,7 +22,8 @@ body {
 
 .main {
   display: flex;
-  flex: 4;
+  width: 75vw;
+
   align-items: center;
   justify-content: center;
 }

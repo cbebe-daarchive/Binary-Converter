@@ -1,17 +1,19 @@
+@import "variables";
+
 .sidebar {
-  flex: 1;
   height: 100vh;
+  width: 20vw;
 }
 
 .byte-edit {
-  color: #ccc;
+  color: $text-colour;
 }
 
 .dec-wrap {
   display: flex;
   flex-direction: row;
   font-size: 2rem;
-  color: #ccc;
+  color: $text-colour;
 }
 
 .num-input {
@@ -21,7 +23,7 @@
   font-family: "Roboto Mono", monospace;
   background-color: transparent;
   border: none;
-  color: #ccc;
+  color: $text-colour;
 
   &:focus {
     border: none;
