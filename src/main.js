@@ -7,7 +7,5 @@ import getBinary from "./getbin.js";
 generateByte();
 document.getElementById("byteAdd").addEventListener("click", addByte);
 document.getElementById("byteRemove").addEventListener("click", removeByte);
-document
-  .getElementById("numInput")
-  .addEventListener("input", (e) => binarySet(e.data));
+document.getElementById("numInput").addEventListener("input", binarySet);
 document.getElementById("getBits").addEventListener("click", getBinary);

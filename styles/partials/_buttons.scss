@@ -1,0 +1,17 @@
+button {
+  background-color: rgb(64, 24, 209);
+  border-radius: 0.5rem;
+  color: #ccc;
+  font-size: 1rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.side-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-wrap {
+  display: flex;
+  flex-direction: column;
+}

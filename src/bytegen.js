@@ -44,7 +44,7 @@ export const generateByte = () => {
   const byte = document.createElement("div");
   byte.className = "byte";
   const byteWrap = document.createElement("div");
-  byteWrap.className = "byte-wrap";
+  byteWrap.className = "bits-wrap";
   for (let i = 0; i < 8; i++) {
     const bit = document.createElement("div");
     bit.className = "bit";

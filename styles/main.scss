@@ -1,0 +1,27 @@
+@import "partials/buttons";
+@import "partials/bytes";
+@import "partials/sidebar";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: rgb(10, 71, 112);
+}
+
+.container {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex: 4;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,4 +1,3 @@
-"use strict";
 import { updateBit } from "./bit.js";
 let tempInput;
 const numInput = document.getElementById("numInput");
@@ -9,13 +8,16 @@ const inputToBin = (numEval) => {
   bitArray.forEach((bit) => bit.classList.remove("on"));
   const binSlen = binString.length;
   const bitAlen = bitArray.length;
+
   for (let i = 1; i <= binSlen; i++)
     if (binString[binSlen - i] === "1")
       bitArray[bitAlen - i].classList.add("on");
+
   bitArray.forEach((bit) => updateBit(bit));
 };
 
-const inputErrorHandle = (inputData) => {
+const inputErrorHandle = (e) => {
+  const inputData = e.data;
   const invalidInput = inputData === "+" || inputData === "-";
   const zeroInput = inputData === "0" && numInput.value === "00";
   const emptyInput = numInput.value.length === 0;
@@ -38,7 +40,7 @@ const overflowHandle = () => {
     numEval &= maxVal;
     overflow = true;
   }
-  return { numEval, overflow };
+  return { numEval: numEval, overflow: overflow };
 };
 
 export const evaluateNumInput = () => {
@@ -49,10 +51,9 @@ export const evaluateNumInput = () => {
   inputToBin(numEval);
 };
 
-export const binarySet = (inputData) => {
-  if (inputData == null) return;
-  inputErrorHandle(inputData);
-  if (tempInput !== numInput.value) exports.evaluateNumInput();
+export const binarySet = (e) => {
+  inputErrorHandle(e);
+  if (tempInput !== numInput.value) evaluateNumInput();
   tempInput = numInput.value;
   numInput.style.width = numInput.value.length + 2 + "ch";
 };
