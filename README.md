@@ -19,4 +19,4 @@ Bugs (Resolved):
 
 ## Github Pages Link
 
-https://cbebe.github.io/binaryrep/
+https://cbebe.github.io/Binary-Converter/
