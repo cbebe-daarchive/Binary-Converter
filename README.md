@@ -1,6 +1,10 @@
 # Binary Representation
 
-Bugs (Resolved):
+## Github Pages Link
+
+https://cbebe.github.io/Binary-Converter/
+
+## Bugs (Resolved)
 
 - when the number overflows and another byte is added,
   = the number doesn't update the bits
@@ -12,11 +16,8 @@ Bugs (Resolved):
 
 - Add tooltips
 - Add "Copied to clipboard" message
-- Maybe a new layout so the buttons don't move every time the bytes are deleted
+- Maybe a new layout so the buttons don't move every time the bytes are deleted - done, just need to make it more responsive
 - Overflow message
 - Bit operations (shifting, and, or, not, xor)
 - Signed integer values
 
-## Github Pages Link
-
-https://cbebe.github.io/Binary-Converter/
